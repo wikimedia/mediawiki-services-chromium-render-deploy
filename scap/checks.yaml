@@ -1,0 +1,13 @@
+checks:
+  depool:
+    type: command
+    stage: promote
+    command: depool-proton
+  endpoints:
+    type: nrpe
+    stage: restart_service
+    command: check_endpoints_proton
+  repool:
+    type: command
+    stage: restart_service
+    command: pool-proton
