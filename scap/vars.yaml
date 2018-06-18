@@ -8,8 +8,8 @@ metrics_port: 8125
 # service
 port: 24766
 proxy:
-render_concurrency: 1
+render_concurrency: 3
 render_queue_timeout: 60
 render_execution_timeout: 90
-max_render_queue_size: 3
+max_render_queue_size: 50
 queue_health_logging_interval: 3600
