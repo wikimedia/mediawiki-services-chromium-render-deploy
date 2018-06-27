@@ -74,6 +74,13 @@ services:
         query: '{{ default(request.query, {}) }}'
         headers: '{{request.headers}}'
         body: '{{request.body}}'
+      # the request template for contacting RESTBase
+      restbase_req:
+        method: "{{request.method}}"
+        uri: <%= restbase_uri %>/{{domain}}/v1/{+path}
+        query: "{{ default(request.query, {}) }}"
+        headers: "{{request.headers}}"
+        body: "{{request.body}}"
       pdf_options:
         scale: 1
         displayHeaderFooter: false
