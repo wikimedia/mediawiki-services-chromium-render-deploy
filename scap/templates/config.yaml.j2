@@ -98,6 +98,11 @@ services:
         args:
           - '--no-sandbox'
           - '--disable-setuid-sandbox'
+          - '--font-rendering-hinting=medium'
+          - '--enable-font-antialiasing'
+          - '--hide-scrollbars'
+          - '--disable-gpu'
+          - '--no-first-run'
       render_concurrency: <%= render_concurrency %>
       render_queue_timeout: <%= render_queue_timeout %>
       render_execution_timeout: <%= render_execution_timeout %>
