@@ -68,12 +68,15 @@ services:
       #   - x-request-id
       # User-Agent HTTP header to use for requests
       user_agent: "Proton/WMF"
+      # the request template for contacting the MW appservers
       mw_req:
-        method: '{{request.method}}'
-        uri: "http://{{language}}{{if(mobile, '.m', '')}}.{{domain}}/w/index.php?title={+article}"
-        query: '{{ default(request.query, {}) }}'
-        headers: '{{request.headers}}'
-        body: '{{request.body}}'
+        method: get
+        uri: '<%= mwapi_host %>/w/index.php'
+        query:
+          title: '{{request.params.title}}'
+        headers:
+          host: '{{request.params.domain}}'
+          x-subdomain: '{{if(request.params.mobile, "M", "")}}'
       # the request template for contacting RESTBase
       restbase_req:
         method: "{{request.method}}"
