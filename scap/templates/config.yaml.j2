@@ -97,6 +97,7 @@ services:
           bottom: '0.75in'
           left: '0.5in'
       puppeteer_options:
+        ignoreHTTPSErrors: true
         timeout: 30000
         args:
           - '--no-sandbox'
