@@ -74,6 +74,7 @@ services:
         uri: '<%= mwapi_host %>/w/index.php'
         query:
           title: '{{request.params.title}}'
+          printable: yes
         headers:
           host: '{{request.params.domain}}'
           x-subdomain: '{{if(request.params.mobile, "M", "")}}'
