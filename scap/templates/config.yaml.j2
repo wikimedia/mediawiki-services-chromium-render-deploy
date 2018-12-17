@@ -71,9 +71,10 @@ services:
       # the request template for contacting the MW appservers
       mw_req:
         method: get
-        uri: '<%= mwapi_host %>/w/index.php'
+        uri: 'https://{{extdomain}}/w/index.php'
         query:
           title: '{{request.params.title}}'
+          printable: yes
         headers:
           host: '{{request.params.domain}}'
           x-subdomain: '{{if(request.params.mobile, "M", "")}}'
