@@ -71,9 +71,8 @@ services:
       # the request template for contacting the MW appservers
       mw_req:
         method: get
-        uri: '<%= mwapi_host %>/w/index.php'
-        query:
-          title: '{{request.params.title}}'
+        # TODO: temporary to figure out what is going on with T210793
+        uri: https://{{extdomain}}/wiki/{{title}}
         headers:
           host: '{{request.params.domain}}'
           x-subdomain: '{{if(request.params.mobile, "M", "")}}'
