@@ -8,6 +8,8 @@ metrics_port: 8125
 # service
 port: 24766
 proxy:
+# .*:.* - IPv6 or non-standard port; [\d.]+ - IPv4
+host_blacklist: '.*:.*|[\d.]+|.*\.wmnet'
 render_concurrency: 3
 render_queue_timeout: 60
 render_execution_timeout: 90

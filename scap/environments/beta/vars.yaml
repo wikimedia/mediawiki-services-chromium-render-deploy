@@ -1,0 +1,2 @@
+# .*:.* - IPv6 or non-standard port; [\d.]+ - IPv4
+host_blacklist: '.*:.*|[\d.]+|.*\.wmflabs'

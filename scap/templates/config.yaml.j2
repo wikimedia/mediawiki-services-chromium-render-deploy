@@ -110,6 +110,7 @@ services:
           - '--hide-scrollbars'
           - '--disable-gpu'
           - '--no-first-run'
+      host_blacklist: '<%= host_blacklist %>'
       render_concurrency: <%= render_concurrency %>
       render_queue_timeout: <%= render_queue_timeout %>
       render_execution_timeout: <%= render_execution_timeout %>
