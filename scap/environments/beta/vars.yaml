@@ -1,2 +1,2 @@
 # .*:.* - IPv6 or non-standard port; [\d.]+ - IPv4
-host_blacklist: '.*:.*|[\d.]+|.*\.wmflabs'
+host_blacklist: '.*:.*|[\d.]+|.*\.wmflabs|gistcdn\.githack\.com'
